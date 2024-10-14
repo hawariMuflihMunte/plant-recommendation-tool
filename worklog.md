@@ -18,6 +18,6 @@
   - I want to do an experiment by integrating Django application with React TypeScript Vite application
     - Is it work?
       - [x] not yet
-      - [] yes
-      - [] no
+      - [ ] yes
+      - [ ] no
     
