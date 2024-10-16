@@ -177,6 +177,22 @@
         "documentation": {}
     },
     {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "*",
         "importPath": "core.views",
         "description": "core.views",
@@ -238,6 +254,14 @@
         "description": "snippets.models",
         "isExtraImport": true,
         "detail": "snippets.models",
+        "documentation": {}
+    },
+    {
+        "label": "views",
+        "importPath": "snippets",
+        "description": "snippets",
+        "isExtraImport": true,
+        "detail": "snippets",
         "documentation": {}
     },
     {
@@ -544,7 +568,7 @@
         "kind": 5,
         "importPath": "plamentor.plamentor_backend.plamentor_backend.urls",
         "description": "plamentor.plamentor_backend.plamentor_backend.urls",
-        "peekOfCode": "urlpatterns = [\n    re_path(r'^admin/', admin.site.urls),\n    re_path(r'^plamentor/', ReactView.as_view(), name=\"React App\"),\n]",
+        "peekOfCode": "urlpatterns = [\n    re_path(r'^admin/', admin.site.urls),\n    re_path(r'^plamentor/', ReactView.as_view(), name=\"React App\"),\n    re_path(r'', include('snippets.urls')),\n]",
         "detail": "plamentor.plamentor_backend.plamentor_backend.urls",
         "documentation": {}
     },
@@ -621,11 +645,29 @@
         "documentation": {}
     },
     {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "plamentor.plamentor_backend.snippets.urls",
+        "description": "plamentor.plamentor_backend.snippets.urls",
+        "peekOfCode": "urlpatterns = [\n    path('snippets/', views.snippet_list),\n    path('snippets/<int:pk>/', views.snippet_detail),\n]",
+        "detail": "plamentor.plamentor_backend.snippets.urls",
+        "documentation": {}
+    },
+    {
         "label": "snippet_list",
         "kind": 2,
         "importPath": "plamentor.plamentor_backend.snippets.views",
         "description": "plamentor.plamentor_backend.snippets.views",
         "peekOfCode": "def snippet_list(request):\n    \"\"\"\n    Lit all code snippets, or create a new snippet.\n    \"\"\"\n    if request.method == 'GET':\n        snippets = Snippet.objects.all()\n        serializer = SnippetSerializer(snippets, many=True)\n        return JsonResponse(serializer.data, safe=False)\n    elif request.method == 'POST':\n        data = JSONParser().parse(request)",
+        "detail": "plamentor.plamentor_backend.snippets.views",
+        "documentation": {}
+    },
+    {
+        "label": "snippet_detail",
+        "kind": 2,
+        "importPath": "plamentor.plamentor_backend.snippets.views",
+        "description": "plamentor.plamentor_backend.snippets.views",
+        "peekOfCode": "def snippet_detail(request, pk):\n    \"\"\"\n    Retrieve, update or delete a code snippet.\n    \"\"\"\n    try:\n        snippet = Snippet.objects.get(pk=pk)\n    except Snippet.DoesNotExist:\n        return HttpResponse(status=404)\n    if request.method == 'GET':\n        serializer = SnippetSerializer(snippet)",
         "detail": "plamentor.plamentor_backend.snippets.views",
         "documentation": {}
     },
