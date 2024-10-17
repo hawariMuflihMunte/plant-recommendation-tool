@@ -384,7 +384,7 @@
         "kind": 5,
         "importPath": "tutor.polls.urls",
         "description": "tutor.polls.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', view=views.index, name='index')\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', view=views.index, name='index'),\n    path('<int:question_id>/', views.detail, name='detail'),\n    path('<int:question_id>/results/', views.results, name='results'),\n    path('<int:question_id>/vote/', views.vote, name='vote'),\n]",
         "detail": "tutor.polls.urls",
         "documentation": {}
     },
@@ -393,7 +393,34 @@
         "kind": 2,
         "importPath": "tutor.polls.views",
         "description": "tutor.polls.views",
-        "peekOfCode": "def index(request):\n    return HttpResponse('Hello, world. You\\'re at the polls index.')",
+        "peekOfCode": "def index(request):\n    return HttpResponse('Hello, world. You\\'re at the polls index.')\ndef detail(request, question_id):\n    return HttpResponse('You\\'re looking at question %s.' % question_id)\ndef results(request, question_id):\n    response = 'You\\'re looking at the results of question %s.'\n    return HttpResponse(response % question_id)\ndef vote(request, question_id):\n    return HttpResponse('You\\'re voting on question %s.' % question_id)",
+        "detail": "tutor.polls.views",
+        "documentation": {}
+    },
+    {
+        "label": "detail",
+        "kind": 2,
+        "importPath": "tutor.polls.views",
+        "description": "tutor.polls.views",
+        "peekOfCode": "def detail(request, question_id):\n    return HttpResponse('You\\'re looking at question %s.' % question_id)\ndef results(request, question_id):\n    response = 'You\\'re looking at the results of question %s.'\n    return HttpResponse(response % question_id)\ndef vote(request, question_id):\n    return HttpResponse('You\\'re voting on question %s.' % question_id)",
+        "detail": "tutor.polls.views",
+        "documentation": {}
+    },
+    {
+        "label": "results",
+        "kind": 2,
+        "importPath": "tutor.polls.views",
+        "description": "tutor.polls.views",
+        "peekOfCode": "def results(request, question_id):\n    response = 'You\\'re looking at the results of question %s.'\n    return HttpResponse(response % question_id)\ndef vote(request, question_id):\n    return HttpResponse('You\\'re voting on question %s.' % question_id)",
+        "detail": "tutor.polls.views",
+        "documentation": {}
+    },
+    {
+        "label": "vote",
+        "kind": 2,
+        "importPath": "tutor.polls.views",
+        "description": "tutor.polls.views",
+        "peekOfCode": "def vote(request, question_id):\n    return HttpResponse('You\\'re voting on question %s.' % question_id)",
         "detail": "tutor.polls.views",
         "documentation": {}
     },
