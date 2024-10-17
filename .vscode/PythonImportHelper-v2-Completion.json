@@ -195,6 +195,14 @@
         "documentation": {}
     },
     {
+        "label": "generic",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
@@ -424,7 +432,7 @@
         "kind": 5,
         "importPath": "tutor.polls.urls",
         "description": "tutor.polls.urls",
-        "peekOfCode": "app_name = 'polls'\nurlpatterns = [\n    path('', view=views.index, name='index'),\n    path('detail/<int:question_id>/', views.detail, name='detail'),\n    path('<int:question_id>/results/', views.results, name='results'),\n    path('<int:question_id>/vote/', views.vote, name='vote'),\n]",
+        "peekOfCode": "app_name = 'polls'\nurlpatterns = [\n    path('', views.IndexView.as_view(), name='index'),\n    path('detail/<int:pk>/', views.DetailView.as_view(), name='detail'),\n    path('<int:pk>/results/', views.ResultsView.as_view(), name='results'),\n    path('<int:question_id>/vote/', views.vote, name='vote'),\n]",
         "detail": "tutor.polls.urls",
         "documentation": {}
     },
@@ -433,34 +441,34 @@
         "kind": 5,
         "importPath": "tutor.polls.urls",
         "description": "tutor.polls.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', view=views.index, name='index'),\n    path('detail/<int:question_id>/', views.detail, name='detail'),\n    path('<int:question_id>/results/', views.results, name='results'),\n    path('<int:question_id>/vote/', views.vote, name='vote'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', views.IndexView.as_view(), name='index'),\n    path('detail/<int:pk>/', views.DetailView.as_view(), name='detail'),\n    path('<int:pk>/results/', views.ResultsView.as_view(), name='results'),\n    path('<int:question_id>/vote/', views.vote, name='vote'),\n]",
         "detail": "tutor.polls.urls",
         "documentation": {}
     },
     {
-        "label": "index",
-        "kind": 2,
+        "label": "IndexView",
+        "kind": 6,
         "importPath": "tutor.polls.views",
         "description": "tutor.polls.views",
-        "peekOfCode": "def index(request):\n    latest_question_list = Question.objects.order_by('-pub_date')\n    context = {\n        \"latest_question_list\": latest_question_list,\n    }\n    return render(request, 'polls/index.html', context)\ndef detail(request, question_id):\n    try:\n        question = Question.objects.get(pk=question_id)\n    except Question.DoesNotExist:",
+        "peekOfCode": "class IndexView(generic.ListView):\n    template_name = 'polls/index.html'\n    context_object_name = 'latest_question_list'\n    def get_queryset(self):\n        \"\"\"Return the last five published questions.\"\"\"\n        return Question.objects.order_by('-pub_date')[:5]\nclass DetailView(generic.DetailView):\n    model = Question\n    template_name = 'polls/detail.html'\nclass ResultsView(generic.DetailView):",
         "detail": "tutor.polls.views",
         "documentation": {}
     },
     {
-        "label": "detail",
-        "kind": 2,
+        "label": "DetailView",
+        "kind": 6,
         "importPath": "tutor.polls.views",
         "description": "tutor.polls.views",
-        "peekOfCode": "def detail(request, question_id):\n    try:\n        question = Question.objects.get(pk=question_id)\n    except Question.DoesNotExist:\n        raise Http404('Question does not exist')\n    ## Shorthand\n    # question - get_object_or_404(Question, pk=question_id)\n    return render(request, 'polls/detail.html', {\n        'question': question,\n    })",
+        "peekOfCode": "class DetailView(generic.DetailView):\n    model = Question\n    template_name = 'polls/detail.html'\nclass ResultsView(generic.DetailView):\n    model = Question\n    template_name = 'polls/results.html'\ndef vote(request, question_id):\n    question = get_object_or_404(Question, pk=question_id)\n    try:\n        selected_choice = question.choice_set.get(pk=request.POST[\"choice\"])",
         "detail": "tutor.polls.views",
         "documentation": {}
     },
     {
-        "label": "results",
-        "kind": 2,
+        "label": "ResultsView",
+        "kind": 6,
         "importPath": "tutor.polls.views",
         "description": "tutor.polls.views",
-        "peekOfCode": "def results(request, question_id):\n    question = get_object_or_404(Question, pk=question_id)\n    return render(request, 'polls/results.html', {\n        'question': question,\n    })\ndef vote(request, question_id):\n    question = get_object_or_404(Question, pk=question_id)\n    try:\n        selected_choice = question.choice_set.get(pk=request.POST[\"choice\"])\n    except (KeyError, Choice.DoesNotExist):",
+        "peekOfCode": "class ResultsView(generic.DetailView):\n    model = Question\n    template_name = 'polls/results.html'\ndef vote(request, question_id):\n    question = get_object_or_404(Question, pk=question_id)\n    try:\n        selected_choice = question.choice_set.get(pk=request.POST[\"choice\"])\n    except (KeyError, Choice.DoesNotExist):\n        # Redisplay the question voting form.\n        return render(",
         "detail": "tutor.polls.views",
         "documentation": {}
     },
