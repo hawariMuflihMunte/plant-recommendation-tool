@@ -155,6 +155,14 @@
         "documentation": {}
     },
     {
+        "label": "Http404",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
@@ -384,7 +392,7 @@
         "kind": 5,
         "importPath": "tutor.polls.urls",
         "description": "tutor.polls.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', view=views.index, name='index'),\n    path('<int:question_id>/', views.detail, name='detail'),\n    path('<int:question_id>/results/', views.results, name='results'),\n    path('<int:question_id>/vote/', views.vote, name='vote'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', view=views.index, name='index'),\n    # the 'name' value as called by the {% url %} template tag\n    path('details/<int:question_id>/', views.detail, name='detail'),\n    path('<int:question_id>/results/', views.results, name='results'),\n    path('<int:question_id>/vote/', views.vote, name='vote'),\n]",
         "detail": "tutor.polls.urls",
         "documentation": {}
     },
@@ -393,7 +401,7 @@
         "kind": 2,
         "importPath": "tutor.polls.views",
         "description": "tutor.polls.views",
-        "peekOfCode": "def index(request):\n    latest_question_list = Question.objects.order_by('-pub_date')\n    context = {\n        \"latest_question_list\": latest_question_list,\n    }\n    return render(request, 'polls/index.html', context)\ndef detail(request, question_id):\n    return HttpResponse('You\\'re looking at question %s.' % question_id)\ndef results(request, question_id):\n    response = 'You\\'re looking at the results of question %s.'",
+        "peekOfCode": "def index(request):\n    latest_question_list = Question.objects.order_by('-pub_date')\n    context = {\n        \"latest_question_list\": latest_question_list,\n    }\n    return render(request, 'polls/index.html', context)\ndef detail(request, question_id):\n    try:\n        question = Question.objects.get(pk=question_id)\n    except Question.DoesNotExist:",
         "detail": "tutor.polls.views",
         "documentation": {}
     },
@@ -402,7 +410,7 @@
         "kind": 2,
         "importPath": "tutor.polls.views",
         "description": "tutor.polls.views",
-        "peekOfCode": "def detail(request, question_id):\n    return HttpResponse('You\\'re looking at question %s.' % question_id)\ndef results(request, question_id):\n    response = 'You\\'re looking at the results of question %s.'\n    return HttpResponse(response % question_id)\ndef vote(request, question_id):\n    return HttpResponse('You\\'re voting on question %s.' % question_id)",
+        "peekOfCode": "def detail(request, question_id):\n    try:\n        question = Question.objects.get(pk=question_id)\n    except Question.DoesNotExist:\n        raise Http404('Question does not exist')\n    ## Shorthand\n    # question - get_object_or_404(Questoin, pk=question_id)\n    return render(request, 'polls/detail.html', {\n        'question': question,\n    })",
         "detail": "tutor.polls.views",
         "documentation": {}
     },
