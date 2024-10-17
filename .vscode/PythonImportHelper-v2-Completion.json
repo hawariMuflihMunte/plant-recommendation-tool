@@ -393,7 +393,7 @@
         "kind": 2,
         "importPath": "tutor.polls.views",
         "description": "tutor.polls.views",
-        "peekOfCode": "def index(request):\n    return HttpResponse('Hello, world. You\\'re at the polls index.')\ndef detail(request, question_id):\n    return HttpResponse('You\\'re looking at question %s.' % question_id)\ndef results(request, question_id):\n    response = 'You\\'re looking at the results of question %s.'\n    return HttpResponse(response % question_id)\ndef vote(request, question_id):\n    return HttpResponse('You\\'re voting on question %s.' % question_id)",
+        "peekOfCode": "def index(request):\n    latest_question_list = Question.objects.order_by('-pub_date')[:5]\n    output = ', '.join([q.question_text for q in latest_question_list])\n    return HttpResponse(output)\ndef detail(request, question_id):\n    return HttpResponse('You\\'re looking at question %s.' % question_id)\ndef results(request, question_id):\n    response = 'You\\'re looking at the results of question %s.'\n    return HttpResponse(response % question_id)\ndef vote(request, question_id):",
         "detail": "tutor.polls.views",
         "documentation": {}
     },
