@@ -195,22 +195,6 @@
         "documentation": {}
     },
     {
-        "label": "Choice",
-        "importPath": "tutor.polls.models",
-        "description": "tutor.polls.models",
-        "isExtraImport": true,
-        "detail": "tutor.polls.models",
-        "documentation": {}
-    },
-    {
-        "label": "vote",
-        "importPath": "tutor.polls.views",
-        "description": "tutor.polls.views",
-        "isExtraImport": true,
-        "detail": "tutor.polls.views",
-        "documentation": {}
-    },
-    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,

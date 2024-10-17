@@ -2,9 +2,7 @@ from django.db.models import F
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.urls import reverse
-from tutor.polls.models import Choice
-from tutor.polls.views import vote
-from .models import Question
+from .models import Question, Choice
 
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')
