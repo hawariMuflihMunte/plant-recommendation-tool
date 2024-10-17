@@ -114,6 +114,23 @@
         "documentation": {}
     },
     {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
         "label": "TestCase",
         "importPath": "django.test",
         "description": "django.test",
@@ -349,7 +366,7 @@
         "kind": 6,
         "importPath": "tutor.polls.models",
         "description": "tutor.polls.models",
-        "peekOfCode": "class Question(models.Model):\n    question_text = models.CharField(max_length=200)\n    pub_date = models.DateTimeField('date published')\nclass Choice(models.Model):\n    question = models.ForeignKey(Question, on_delete=models.CASCADE)\n    choice_text = models.CharField(max_length=200)\n    votes = models.IntegerField(default=0)",
+        "peekOfCode": "class Question(models.Model):\n    question_text = models.CharField(max_length=200)\n    pub_date = models.DateTimeField('date published')\n    def __str__(self):\n        return self.question_text\n    def was_published_recently(self):\n        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)\nclass Choice(models.Model):\n    question = models.ForeignKey(Question, on_delete=models.CASCADE)\n    choice_text = models.CharField(max_length=200)",
         "detail": "tutor.polls.models",
         "documentation": {}
     },
@@ -358,7 +375,7 @@
         "kind": 6,
         "importPath": "tutor.polls.models",
         "description": "tutor.polls.models",
-        "peekOfCode": "class Choice(models.Model):\n    question = models.ForeignKey(Question, on_delete=models.CASCADE)\n    choice_text = models.CharField(max_length=200)\n    votes = models.IntegerField(default=0)",
+        "peekOfCode": "class Choice(models.Model):\n    question = models.ForeignKey(Question, on_delete=models.CASCADE)\n    choice_text = models.CharField(max_length=200)\n    votes = models.IntegerField(default=0)\n    def __str__(self):\n        return self.choice_text",
         "detail": "tutor.polls.models",
         "documentation": {}
     },
