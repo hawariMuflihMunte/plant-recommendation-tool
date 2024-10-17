@@ -139,6 +139,14 @@
         "documentation": {}
     },
     {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
         "label": "TestCase",
         "importPath": "django.test",
         "description": "django.test",
@@ -414,7 +422,7 @@
         "kind": 6,
         "importPath": "tutor.polls.models",
         "description": "tutor.polls.models",
-        "peekOfCode": "class Question(models.Model):\n    question_text = models.CharField(max_length=200)\n    pub_date = models.DateTimeField('date published')\n    def __str__(self):\n        return self.question_text\n    def was_published_recently(self):\n        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)\nclass Choice(models.Model):\n    question = models.ForeignKey(Question, on_delete=models.CASCADE)\n    choice_text = models.CharField(max_length=200)",
+        "peekOfCode": "class Question(models.Model):\n    question_text = models.CharField(max_length=200)\n    pub_date = models.DateTimeField('date published')\n    def __str__(self):\n        return self.question_text\n    def was_published_recently(self):\n        now = timezone.now()\n        return now - datetime.timedelta(days=1) <= self.pub_date <= now\nclass Choice(models.Model):\n    question = models.ForeignKey(Question, on_delete=models.CASCADE)",
         "detail": "tutor.polls.models",
         "documentation": {}
     },
@@ -425,6 +433,15 @@
         "description": "tutor.polls.models",
         "peekOfCode": "class Choice(models.Model):\n    question = models.ForeignKey(Question, on_delete=models.CASCADE)\n    choice_text = models.CharField(max_length=200)\n    votes = models.IntegerField(default=0)\n    def __str__(self):\n        return self.choice_text",
         "detail": "tutor.polls.models",
+        "documentation": {}
+    },
+    {
+        "label": "QuestionModelTests",
+        "kind": 6,
+        "importPath": "tutor.polls.tests",
+        "description": "tutor.polls.tests",
+        "peekOfCode": "class QuestionModelTests(TestCase):\n    def test_was_published_recently_with_future_question(self):\n        \"\"\"\n        was_published_recently() returns False for questions whose pub_date\n        is in the future.\n        \"\"\"\n        time = timezone.now() + datetime.timedelta(days=30)\n        future_question = Question(pub_date=time)\n        self.assertIs(future_question.was_published_recently(), False)",
+        "detail": "tutor.polls.tests",
         "documentation": {}
     },
     {
