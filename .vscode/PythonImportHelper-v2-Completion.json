@@ -49,6 +49,22 @@
         "documentation": {}
     },
     {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "get_wsgi_application",
         "importPath": "django.core.wsgi",
         "description": "django.core.wsgi",
@@ -86,6 +102,14 @@
         "description": "django.shortcuts",
         "isExtraImport": true,
         "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
         "documentation": {}
     },
     {
@@ -138,7 +162,7 @@
         "kind": 5,
         "importPath": "tutor.mysite.settings",
         "description": "tutor.mysite.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'polls',",
         "detail": "tutor.mysite.settings",
         "documentation": {}
     },
@@ -147,7 +171,7 @@
         "kind": 5,
         "importPath": "tutor.mysite.settings",
         "description": "tutor.mysite.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]\nMIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'polls',\n]\nMIDDLEWARE = [",
         "detail": "tutor.mysite.settings",
         "documentation": {}
     },
@@ -264,7 +288,7 @@
         "kind": 5,
         "importPath": "tutor.mysite.urls",
         "description": "tutor.mysite.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('polls/', include('polls.urls')),\n]",
         "detail": "tutor.mysite.urls",
         "documentation": {}
     },
@@ -284,6 +308,24 @@
         "description": "tutor.polls.apps",
         "peekOfCode": "class PollsConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'polls'",
         "detail": "tutor.polls.apps",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "tutor.polls.urls",
+        "description": "tutor.polls.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', view=views.index, name='index')\n]",
+        "detail": "tutor.polls.urls",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "tutor.polls.views",
+        "description": "tutor.polls.views",
+        "peekOfCode": "def index(request):\n    return HttpResponse('Hello, world. You\\'re at the polls index.')",
+        "detail": "tutor.polls.views",
         "documentation": {}
     },
     {
