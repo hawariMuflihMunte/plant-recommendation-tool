@@ -454,6 +454,15 @@
         "documentation": {}
     },
     {
+        "label": "QuestionDetailViewTests",
+        "kind": 6,
+        "importPath": "tutor.polls.tests",
+        "description": "tutor.polls.tests",
+        "peekOfCode": "class QuestionDetailViewTests(TestCase):\n    def test_future_question(self):\n        \"\"\"\n        The detail view of a question with a pub_date in the future\n        returns a 404 not found.\n        \"\"\"\n        future_question = create_question(question_text='Future question.', days=5)\n        url = reverse('polls:detail', args=(future_question.id,))\n        response = self.client.get(url)\n        self.assertEqual(response.status_code, 404)",
+        "detail": "tutor.polls.tests",
+        "documentation": {}
+    },
+    {
         "label": "create_question",
         "kind": 2,
         "importPath": "tutor.polls.tests",
@@ -494,7 +503,7 @@
         "kind": 6,
         "importPath": "tutor.polls.views",
         "description": "tutor.polls.views",
-        "peekOfCode": "class DetailView(generic.DetailView):\n    model = Question\n    template_name = 'polls/detail.html'\nclass ResultsView(generic.DetailView):\n    model = Question\n    template_name = 'polls/results.html'\ndef vote(request, question_id):\n    question = get_object_or_404(Question, pk=question_id)\n    try:\n        selected_choice = question.choice_set.get(pk=request.POST[\"choice\"])",
+        "peekOfCode": "class DetailView(generic.DetailView):\n    model = Question\n    template_name = 'polls/detail.html'\n    def get_queryset(self):\n        return Question.objects.filter(pub_date__lte=timezone.now())\nclass ResultsView(generic.DetailView):\n    model = Question\n    template_name = 'polls/results.html'\ndef vote(request, question_id):\n    question = get_object_or_404(Question, pk=question_id)",
         "detail": "tutor.polls.views",
         "documentation": {}
     },
