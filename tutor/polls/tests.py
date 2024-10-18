@@ -100,5 +100,5 @@ class QuestionIndexViewTests(TestCase):
         response = self.client.get(reverse('polls:index'))
         self.assertQuerySetEqual(
             response.context['latest_question_list'],
-            [question1, question2],
+            [question2, question1],
         )
