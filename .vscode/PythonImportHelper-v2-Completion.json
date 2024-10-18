@@ -41,6 +41,14 @@
         "documentation": {}
     },
     {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
         "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -409,6 +417,24 @@
         "documentation": {}
     },
     {
+        "label": "ChoiceInline",
+        "kind": 6,
+        "importPath": "tutor.polls.admin",
+        "description": "tutor.polls.admin",
+        "peekOfCode": "class ChoiceInline(admin.TabularInline):\n    model = Choice\n    extra = 3\nclass QuestionAdmin(admin.ModelAdmin):\n    fieldsets = [\n        (None, {\n            'fields': ['question_text'],\n        }),\n        ('Date Information', {\n            'fields': ['pub_date'],",
+        "detail": "tutor.polls.admin",
+        "documentation": {}
+    },
+    {
+        "label": "QuestionAdmin",
+        "kind": 6,
+        "importPath": "tutor.polls.admin",
+        "description": "tutor.polls.admin",
+        "peekOfCode": "class QuestionAdmin(admin.ModelAdmin):\n    fieldsets = [\n        (None, {\n            'fields': ['question_text'],\n        }),\n        ('Date Information', {\n            'fields': ['pub_date'],\n            'classes': ['collapse']\n        }),\n    ]",
+        "detail": "tutor.polls.admin",
+        "documentation": {}
+    },
+    {
         "label": "PollsConfig",
         "kind": 6,
         "importPath": "tutor.polls.apps",
@@ -422,7 +448,7 @@
         "kind": 6,
         "importPath": "tutor.polls.models",
         "description": "tutor.polls.models",
-        "peekOfCode": "class Question(models.Model):\n    question_text = models.CharField(max_length=200)\n    pub_date = models.DateTimeField('date published')\n    def __str__(self):\n        return self.question_text\n    def was_published_recently(self):\n        now = timezone.now()\n        return now - datetime.timedelta(days=1) <= self.pub_date <= now\nclass Choice(models.Model):\n    question = models.ForeignKey(Question, on_delete=models.CASCADE)",
+        "peekOfCode": "class Question(models.Model):\n    question_text = models.CharField(max_length=200)\n    pub_date = models.DateTimeField('date published')\n    def __str__(self):\n        return self.question_text\n    @admin.display(\n        boolean=True,\n        ordering='pub_date',\n        description='Published recently?',\n    )",
         "detail": "tutor.polls.models",
         "documentation": {}
     },
