@@ -440,7 +440,7 @@
         "kind": 6,
         "importPath": "tutor.polls.tests",
         "description": "tutor.polls.tests",
-        "peekOfCode": "class QuestionModelTests(TestCase):\n    def test_was_published_recently_with_future_question(self):\n        \"\"\"\n        was_published_recently() returns False for questions whose pub_date\n        is in the future.\n        \"\"\"\n        time = timezone.now() + datetime.timedelta(days=30)\n        future_question = Question(pub_date=time)\n        self.assertIs(future_question.was_published_recently(), False)",
+        "peekOfCode": "class QuestionModelTests(TestCase):\n    def test_was_published_recently_with_future_question(self):\n        \"\"\"\n        was_published_recently() returns False for questions whose pub_date\n        is in the future.\n        \"\"\"\n        time = timezone.now() + datetime.timedelta(days=30)\n        future_question = Question(pub_date=time)\n        self.assertIs(future_question.was_published_recently(), False)\n    def test_was_published_recently_with_old_question(self):",
         "detail": "tutor.polls.tests",
         "documentation": {}
     },
