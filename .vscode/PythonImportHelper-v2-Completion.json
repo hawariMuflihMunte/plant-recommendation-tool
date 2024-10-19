@@ -1,0 +1,563 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "F",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponseRedirect",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "generic",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "tutor.mysite.asgi",
+        "description": "tutor.mysite.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "tutor.mysite.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "tutor.mysite.settings",
+        "description": "tutor.mysite.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-dbqipzv=&4h34$ixqef+gyj@e*mi(3-#@)1@is^wj$gl+x(6qo'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "tutor.mysite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "tutor.mysite.settings",
+        "description": "tutor.mysite.settings",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-dbqipzv=&4h34$ixqef+gyj@e*mi(3-#@)1@is^wj$gl+x(6qo'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "tutor.mysite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "tutor.mysite.settings",
+        "description": "tutor.mysite.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "tutor.mysite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "tutor.mysite.settings",
+        "description": "tutor.mysite.settings",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'polls',",
+        "detail": "tutor.mysite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "tutor.mysite.settings",
+        "description": "tutor.mysite.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'polls',\n]\nMIDDLEWARE = [",
+        "detail": "tutor.mysite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "tutor.mysite.settings",
+        "description": "tutor.mysite.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'mysite.urls'",
+        "detail": "tutor.mysite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "tutor.mysite.settings",
+        "description": "tutor.mysite.settings",
+        "peekOfCode": "ROOT_URLCONF = 'mysite.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "tutor.mysite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "tutor.mysite.settings",
+        "description": "tutor.mysite.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "tutor.mysite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "tutor.mysite.settings",
+        "description": "tutor.mysite.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'mysite.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.1/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation",
+        "detail": "tutor.mysite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "tutor.mysite.settings",
+        "description": "tutor.mysite.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "detail": "tutor.mysite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "tutor.mysite.settings",
+        "description": "tutor.mysite.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "tutor.mysite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "tutor.mysite.settings",
+        "description": "tutor.mysite.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "tutor.mysite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "tutor.mysite.settings",
+        "description": "tutor.mysite.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "tutor.mysite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "tutor.mysite.settings",
+        "description": "tutor.mysite.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "tutor.mysite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "tutor.mysite.settings",
+        "description": "tutor.mysite.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "tutor.mysite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "tutor.mysite.settings",
+        "description": "tutor.mysite.settings",
+        "peekOfCode": "STATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "tutor.mysite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "tutor.mysite.settings",
+        "description": "tutor.mysite.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "tutor.mysite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "tutor.mysite.urls",
+        "description": "tutor.mysite.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('polls/', include('polls.urls')),\n]",
+        "detail": "tutor.mysite.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "tutor.mysite.wsgi",
+        "description": "tutor.mysite.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "tutor.mysite.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "tutor.polls.migrations.0001_initial",
+        "description": "tutor.polls.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Question',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('question_text', models.CharField(max_length=200)),",
+        "detail": "tutor.polls.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "ChoiceInline",
+        "kind": 6,
+        "importPath": "tutor.polls.admin",
+        "description": "tutor.polls.admin",
+        "peekOfCode": "class ChoiceInline(admin.TabularInline):\n    model = Choice\n    extra = 3\nclass QuestionAdmin(admin.ModelAdmin):\n    fieldsets = [\n        (None, {\n            'fields': ['question_text'],\n        }),\n        ('Date Information', {\n            'fields': ['pub_date'],",
+        "detail": "tutor.polls.admin",
+        "documentation": {}
+    },
+    {
+        "label": "QuestionAdmin",
+        "kind": 6,
+        "importPath": "tutor.polls.admin",
+        "description": "tutor.polls.admin",
+        "peekOfCode": "class QuestionAdmin(admin.ModelAdmin):\n    fieldsets = [\n        (None, {\n            'fields': ['question_text'],\n        }),\n        ('Date Information', {\n            'fields': ['pub_date'],\n            'classes': ['collapse']\n        }),\n    ]",
+        "detail": "tutor.polls.admin",
+        "documentation": {}
+    },
+    {
+        "label": "PollsConfig",
+        "kind": 6,
+        "importPath": "tutor.polls.apps",
+        "description": "tutor.polls.apps",
+        "peekOfCode": "class PollsConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'polls'",
+        "detail": "tutor.polls.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Question",
+        "kind": 6,
+        "importPath": "tutor.polls.models",
+        "description": "tutor.polls.models",
+        "peekOfCode": "class Question(models.Model):\n    question_text = models.CharField(max_length=200)\n    pub_date = models.DateTimeField('date published')\n    def __str__(self):\n        return self.question_text\n    @admin.display(\n        boolean=True,\n        ordering='pub_date',\n        description='Published recently?',\n    )",
+        "detail": "tutor.polls.models",
+        "documentation": {}
+    },
+    {
+        "label": "Choice",
+        "kind": 6,
+        "importPath": "tutor.polls.models",
+        "description": "tutor.polls.models",
+        "peekOfCode": "class Choice(models.Model):\n    question = models.ForeignKey(Question, on_delete=models.CASCADE)\n    choice_text = models.CharField(max_length=200)\n    votes = models.IntegerField(default=0)\n    def __str__(self):\n        return self.choice_text",
+        "detail": "tutor.polls.models",
+        "documentation": {}
+    },
+    {
+        "label": "QuestionModelTests",
+        "kind": 6,
+        "importPath": "tutor.polls.tests",
+        "description": "tutor.polls.tests",
+        "peekOfCode": "class QuestionModelTests(TestCase):\n    def test_was_published_recently_with_future_question(self):\n        \"\"\"\n        was_published_recently() returns False for questions whose pub_date\n        is in the future.\n        \"\"\"\n        time = timezone.now() + datetime.timedelta(days=30)\n        future_question = Question(pub_date=time)\n        self.assertIs(future_question.was_published_recently(), False)\n    def test_was_published_recently_with_old_question(self):",
+        "detail": "tutor.polls.tests",
+        "documentation": {}
+    },
+    {
+        "label": "QuestionIndexViewTests",
+        "kind": 6,
+        "importPath": "tutor.polls.tests",
+        "description": "tutor.polls.tests",
+        "peekOfCode": "class QuestionIndexViewTests(TestCase):\n    def test_no_questions(self):\n        \"\"\"\n        If no questions exist, an appropriate message is displayed.\n        \"\"\"\n        response = self.client.get(reverse('polls:index'))\n        self.assertEqual(response.status_code, 200)\n        self.assertContains(response, 'No polls are available.')\n        self.assertQuerySetEqual(\n            response.context['latest_question_list'],",
+        "detail": "tutor.polls.tests",
+        "documentation": {}
+    },
+    {
+        "label": "QuestionDetailViewTests",
+        "kind": 6,
+        "importPath": "tutor.polls.tests",
+        "description": "tutor.polls.tests",
+        "peekOfCode": "class QuestionDetailViewTests(TestCase):\n    def test_future_question(self):\n        \"\"\"\n        The detail view of a question with a pub_date in the future\n        returns a 404 not found.\n        \"\"\"\n        future_question = create_question(question_text='Future question.', days=5)\n        url = reverse('polls:detail', args=(future_question.id,))\n        response = self.client.get(url)\n        self.assertEqual(response.status_code, 404)",
+        "detail": "tutor.polls.tests",
+        "documentation": {}
+    },
+    {
+        "label": "create_question",
+        "kind": 2,
+        "importPath": "tutor.polls.tests",
+        "description": "tutor.polls.tests",
+        "peekOfCode": "def create_question(question_text, days):\n    \"\"\"\n    Create a question with the given `question_text` and published the given\n    number of `days` offset to now (negative for questions published in the past,\n    positive for questions that have yet to be published).\n    \"\"\"\n    time = timezone.now() + datetime.timedelta(days=days)\n    return Question.objects.create(question_text=question_text, pub_date=time)\nclass QuestionIndexViewTests(TestCase):\n    def test_no_questions(self):",
+        "detail": "tutor.polls.tests",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "tutor.polls.urls",
+        "description": "tutor.polls.urls",
+        "peekOfCode": "app_name = 'polls'\nurlpatterns = [\n    path('', views.IndexView.as_view(), name='index'),\n    path('detail/<int:pk>/', views.DetailView.as_view(), name='detail'),\n    path('<int:pk>/results/', views.ResultsView.as_view(), name='results'),\n    path('<int:question_id>/vote/', views.vote, name='vote'),\n]",
+        "detail": "tutor.polls.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "tutor.polls.urls",
+        "description": "tutor.polls.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', views.IndexView.as_view(), name='index'),\n    path('detail/<int:pk>/', views.DetailView.as_view(), name='detail'),\n    path('<int:pk>/results/', views.ResultsView.as_view(), name='results'),\n    path('<int:question_id>/vote/', views.vote, name='vote'),\n]",
+        "detail": "tutor.polls.urls",
+        "documentation": {}
+    },
+    {
+        "label": "IndexView",
+        "kind": 6,
+        "importPath": "tutor.polls.views",
+        "description": "tutor.polls.views",
+        "peekOfCode": "class IndexView(generic.ListView):\n    template_name = 'polls/index.html'\n    context_object_name = 'latest_question_list'\n    def get_queryset(self):\n        \"\"\"\n        Return the last five published questions\n        (not including those set to be published in the future)\n        \"\"\"\n        return Question.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')[:5]\nclass DetailView(generic.DetailView):",
+        "detail": "tutor.polls.views",
+        "documentation": {}
+    },
+    {
+        "label": "DetailView",
+        "kind": 6,
+        "importPath": "tutor.polls.views",
+        "description": "tutor.polls.views",
+        "peekOfCode": "class DetailView(generic.DetailView):\n    model = Question\n    template_name = 'polls/detail.html'\n    def get_queryset(self):\n        return Question.objects.filter(pub_date__lte=timezone.now())\nclass ResultsView(generic.DetailView):\n    model = Question\n    template_name = 'polls/results.html'\ndef vote(request, question_id):\n    question = get_object_or_404(Question, pk=question_id)",
+        "detail": "tutor.polls.views",
+        "documentation": {}
+    },
+    {
+        "label": "ResultsView",
+        "kind": 6,
+        "importPath": "tutor.polls.views",
+        "description": "tutor.polls.views",
+        "peekOfCode": "class ResultsView(generic.DetailView):\n    model = Question\n    template_name = 'polls/results.html'\ndef vote(request, question_id):\n    question = get_object_or_404(Question, pk=question_id)\n    try:\n        selected_choice = question.choice_set.get(pk=request.POST[\"choice\"])\n    except (KeyError, Choice.DoesNotExist):\n        # Redisplay the question voting form.\n        return render(",
+        "detail": "tutor.polls.views",
+        "documentation": {}
+    },
+    {
+        "label": "vote",
+        "kind": 2,
+        "importPath": "tutor.polls.views",
+        "description": "tutor.polls.views",
+        "peekOfCode": "def vote(request, question_id):\n    question = get_object_or_404(Question, pk=question_id)\n    try:\n        selected_choice = question.choice_set.get(pk=request.POST[\"choice\"])\n    except (KeyError, Choice.DoesNotExist):\n        # Redisplay the question voting form.\n        return render(\n            request,\n            \"polls/detail.html\",\n            {",
+        "detail": "tutor.polls.views",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "tutor.manage",
+        "description": "tutor.manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "tutor.manage",
+        "documentation": {}
+    }
+]
