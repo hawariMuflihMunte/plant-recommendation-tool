@@ -12,6 +12,10 @@
     {% comment %} Bulma Configurations {% endcomment %}
     {% load static %}
     <link rel="stylesheet" href="{% static 'core/css/bulma.config.css' %}">
+
+    {% comment %} HTMX {% endcomment %}
+    {% load static %}
+    <script src="{% static 'core/js/htmx.min.js' %}"></script>
 </head>
 <body>
     {% block content %}
