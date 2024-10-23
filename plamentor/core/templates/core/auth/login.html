@@ -1,0 +1,45 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Plamentor | Login{% endblock title %}
+
+{% block content %}
+    <section class="section">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <h1 class="title is-3 has-text-centered">Login</h1>
+
+                    <form method="POST">
+                        {% csrf_token %}
+
+                        <div class="field">
+                            <label class="label" for="username">Username</label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="text" id="username" name="username" placeholder="Enter your username" required>
+                                <span class="icon is-small is-left">
+                                    <i class="bi bi-person-fill"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label" for="password">Password</label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="password" id="password" name="password" placeholder="Enter your password" required>
+                                <span class="icon is-small is-left">
+                                    <i class="bi bi-person-fill-lock"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <button type="submit" class="button is-primary is-fullwidth">Login</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

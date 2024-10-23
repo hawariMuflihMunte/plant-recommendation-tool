@@ -337,7 +337,7 @@
         "kind": 5,
         "importPath": "plamentor.core.urls",
         "description": "plamentor.core.urls",
-        "peekOfCode": "app_name = 'core'\nurlpatterns = [\n    path('', views.index),\n]",
+        "peekOfCode": "app_name = 'core'\nurlpatterns = [\n    path('', view=views.index, name='home'),\n    path('login/', view=views.login_view, name='auth_login'),\n]",
         "detail": "plamentor.core.urls",
         "documentation": {}
     },
@@ -346,7 +346,7 @@
         "kind": 5,
         "importPath": "plamentor.core.urls",
         "description": "plamentor.core.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.index),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', view=views.index, name='home'),\n    path('login/', view=views.login_view, name='auth_login'),\n]",
         "detail": "plamentor.core.urls",
         "documentation": {}
     },
@@ -355,7 +355,16 @@
         "kind": 2,
         "importPath": "plamentor.core.views",
         "description": "plamentor.core.views",
-        "peekOfCode": "def index(request):\n    return render(request, 'core/index.html')",
+        "peekOfCode": "def index(request):\n    return render(request, 'core/pages/index.html')\ndef login_view(request):\n    return render(request, 'core/auth/login.html')",
+        "detail": "plamentor.core.views",
+        "documentation": {}
+    },
+    {
+        "label": "login_view",
+        "kind": 2,
+        "importPath": "plamentor.core.views",
+        "description": "plamentor.core.views",
+        "peekOfCode": "def login_view(request):\n    return render(request, 'core/auth/login.html')",
         "detail": "plamentor.core.views",
         "documentation": {}
     },
