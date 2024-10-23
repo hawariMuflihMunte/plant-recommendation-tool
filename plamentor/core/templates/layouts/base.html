@@ -16,6 +16,10 @@
     {% comment %} HTMX {% endcomment %}
     {% load static %}
     <script src="{% static 'core/js/htmx.min.js' %}"></script>
+
+    {% comment %} Bootstrap Icons {% endcomment %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/bootstrap-icons/bootstrap-icons.min.css' %}">
 </head>
 <body>
     {% block content %}
