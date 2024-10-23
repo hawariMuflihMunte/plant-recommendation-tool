@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Django Application{% endblock %}</title>
+
+    {% comment %} Bulma {% endcomment %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/bulma/bulma.min.css' %}">
+
+    {% comment %} Bulma Configurations {% endcomment %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/css/bulma.config.css' %}">
 </head>
 <body>
     {% block content %}
