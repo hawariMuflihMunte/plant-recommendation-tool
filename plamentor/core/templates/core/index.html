@@ -1,0 +1,10 @@
+{% extends 'partials/base.html' %}
+
+{% block title %}Plamentor | Home{% endblock title %}
+
+{% block content %}
+    <p>This is the content for the home page.</p>
+
+    {% load static %}
+    <img src="{% static 'core/images/background.png' %}" alt="Soil textures" loading="lazy">
+{% endblock %}
