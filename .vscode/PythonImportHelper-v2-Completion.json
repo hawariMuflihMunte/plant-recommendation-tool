@@ -337,7 +337,7 @@
         "kind": 5,
         "importPath": "plamentor.core.urls",
         "description": "plamentor.core.urls",
-        "peekOfCode": "app_name = 'core'\nurlpatterns = [\n    path('', view=views.index, name='home'),\n    path('login/', view=views.login_view, name='auth_login'),\n]",
+        "peekOfCode": "app_name = 'core'\nurlpatterns = [\n    path('', view=views.index, name='home'),\n    path('login/', view=views.login_view, name='login'),\n]",
         "detail": "plamentor.core.urls",
         "documentation": {}
     },
@@ -346,7 +346,7 @@
         "kind": 5,
         "importPath": "plamentor.core.urls",
         "description": "plamentor.core.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', view=views.index, name='home'),\n    path('login/', view=views.login_view, name='auth_login'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', view=views.index, name='home'),\n    path('login/', view=views.login_view, name='login'),\n]",
         "detail": "plamentor.core.urls",
         "documentation": {}
     },
