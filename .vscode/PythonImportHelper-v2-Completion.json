@@ -120,6 +120,14 @@
         "documentation": {}
     },
     {
+        "label": "reverse_lazy",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -224,6 +232,14 @@
         "documentation": {}
     },
     {
+        "label": "LogoutView",
+        "importPath": "django.contrib.auth.views",
+        "description": "django.contrib.auth.views",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.views",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -262,6 +278,14 @@
         "description": "pathlib",
         "isExtraImport": true,
         "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "constants",
+        "importPath": "django.contrib.messages",
+        "description": "django.contrib.messages",
+        "isExtraImport": true,
+        "detail": "django.contrib.messages",
         "documentation": {}
     },
     {
@@ -369,7 +393,7 @@
         "kind": 5,
         "importPath": "plamentor.core.urls",
         "description": "plamentor.core.urls",
-        "peekOfCode": "app_name = 'core'\nurlpatterns = [\n    path('', view=views.index, name='home'),\n    path('login/', view=views.login_view, name='login'),\n]",
+        "peekOfCode": "app_name = 'core'\nurlpatterns = [\n    path('', view=views.index, name='home'),\n    path('login/', view=views.login_view, name='login'),\n    path('logout/', view=views.CustomLogoutView.as_view(), name='logout'),\n]",
         "detail": "plamentor.core.urls",
         "documentation": {}
     },
@@ -378,8 +402,17 @@
         "kind": 5,
         "importPath": "plamentor.core.urls",
         "description": "plamentor.core.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', view=views.index, name='home'),\n    path('login/', view=views.login_view, name='login'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', view=views.index, name='home'),\n    path('login/', view=views.login_view, name='login'),\n    path('logout/', view=views.CustomLogoutView.as_view(), name='logout'),\n]",
         "detail": "plamentor.core.urls",
+        "documentation": {}
+    },
+    {
+        "label": "CustomLogoutView",
+        "kind": 6,
+        "importPath": "plamentor.core.views",
+        "description": "plamentor.core.views",
+        "peekOfCode": "class CustomLogoutView(LogoutView):\n    next_page = reverse_lazy('core:home')  # Redirect to home after logout",
+        "detail": "plamentor.core.views",
         "documentation": {}
     },
     {
@@ -549,7 +582,7 @@
         "kind": 5,
         "importPath": "plamentor.plamentor_app.settings",
         "description": "plamentor.plamentor_app.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Custom\nMESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'",
         "detail": "plamentor.plamentor_app.settings",
         "documentation": {}
     },
@@ -558,7 +591,7 @@
         "kind": 5,
         "importPath": "plamentor.plamentor_app.settings",
         "description": "plamentor.plamentor_app.settings",
-        "peekOfCode": "STATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Custom\nMESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'",
         "detail": "plamentor.plamentor_app.settings",
         "documentation": {}
     },
@@ -567,7 +600,16 @@
         "kind": 5,
         "importPath": "plamentor.plamentor_app.settings",
         "description": "plamentor.plamentor_app.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Custom\nMESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'",
+        "detail": "plamentor.plamentor_app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MESSAGE_STORAGE",
+        "kind": 5,
+        "importPath": "plamentor.plamentor_app.settings",
+        "description": "plamentor.plamentor_app.settings",
+        "peekOfCode": "MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'",
         "detail": "plamentor.plamentor_app.settings",
         "documentation": {}
     },

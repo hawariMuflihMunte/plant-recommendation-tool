@@ -46,14 +46,20 @@
 
         <!-- Navbar end buttons -->
         <div class="navbar-end">
-            <div class="navbar-item">
+            <div class="navbar-item" id="auth-buttons">
                 <div class="buttons">
-                    <a class="button is-light" href="{% url 'core:login' %}">
+                    <a class="button is-light" id="login-button" href="{% url 'core:login' %}">
                         Log in
                     </a>
+                    <form method="post" action="{% url 'core:logout' %}" style="display: inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="button is-light" id="logout-button">
+                            Log out
+                        </button>
+                    </form>                    
                 </div>
             </div>
-        </div>
+        </div>        
     </div>
 </nav>
 
@@ -74,5 +80,21 @@ document.addEventListener('DOMContentLoaded', () => {
             $target.classList.toggle('is-active');
         });
     });
+
+    // Check if user is logged in (you'll need to set this variable server-side)
+    const isLoggedIn = {{ user.is_authenticated|yesno:"true,false" }};
+
+    // Get login and logout buttons
+    const loginButton = document.getElementById('login-button');
+    const logoutButton = document.getElementById('logout-button');
+
+    // Show/hide buttons based on authentication status
+    if (isLoggedIn) {
+        loginButton.style.display = 'none'; // Hide login button
+        logoutButton.style.display = 'block'; // Show logout button
+    } else {
+        loginButton.style.display = 'block'; // Show login button
+        logoutButton.style.display = 'none'; // Hide logout button
+    }
 });
 </script>

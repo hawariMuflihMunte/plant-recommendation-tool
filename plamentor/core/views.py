@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.shortcuts import redirect
+from django.contrib.auth.views import LogoutView
+from django.urls import reverse_lazy
 
 def index(request):
     return render(request, 'core/pages/index.html')
@@ -25,3 +27,6 @@ def login_view(request):
             return redirect('core:login')
 
     return redirect('core:login')
+
+class CustomLogoutView(LogoutView):
+    next_page = reverse_lazy('core:home')  # Redirect to home after logout
