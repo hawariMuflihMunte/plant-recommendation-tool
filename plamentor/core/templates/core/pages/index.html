@@ -5,9 +5,30 @@
 {% block content %}
     {% include 'layouts/navbar.html' %}
 
-    {% load static %}
     <section id="section-with-bg">
-        
+        <table class="table has-background-black-ter">
+            <thead>
+                <tr>
+                    <th><abbr title="Position">Pos</abbr></th>
+                    <th>Team</th>
+                    <th><abbr title="Played">Pld</abbr></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>
+                    <a
+                        href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
+                        title="Leicester City F.C."
+                        >Leicester City</a
+                    >
+                    <strong>(C)</strong>
+                    </td>
+                    <td>38</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
     {% comment %} <img src="{% static 'core/images/background.png' %}" alt="Soil textures" loading="lazy"> {% endcomment %}
 {% endblock %}
