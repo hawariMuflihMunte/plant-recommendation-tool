@@ -1,0 +1,7 @@
+#section-with-bg {
+    width: 100%;
+    height: auto;
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
