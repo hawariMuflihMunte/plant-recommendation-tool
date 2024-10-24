@@ -8,6 +8,14 @@
         "documentation": {}
     },
     {
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
         "label": "admin",
         "importPath": "django.contrib",
         "description": "django.contrib",
@@ -176,6 +184,14 @@
         "documentation": {}
     },
     {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "render",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -189,6 +205,22 @@
         "description": "django.shortcuts",
         "isExtraImport": true,
         "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
         "documentation": {}
     },
     {
@@ -355,7 +387,7 @@
         "kind": 2,
         "importPath": "plamentor.core.views",
         "description": "plamentor.core.views",
-        "peekOfCode": "def index(request):\n    return render(request, 'core/pages/index.html')\ndef login_view(request):\n    return render(request, 'core/auth/login.html')",
+        "peekOfCode": "def index(request):\n    return render(request, 'core/pages/index.html')\ndef login_view(request):\n    if request.method == 'GET':\n        return render(request, 'core/auth/login.html')\n    if request.method == 'POST':\n        username = request.POST.get('username')\n        password = request.POST.get('password')\n        user = authenticate(request, username=username, password=password)\n        if user is not None:",
         "detail": "plamentor.core.views",
         "documentation": {}
     },
@@ -364,7 +396,7 @@
         "kind": 2,
         "importPath": "plamentor.core.views",
         "description": "plamentor.core.views",
-        "peekOfCode": "def login_view(request):\n    return render(request, 'core/auth/login.html')",
+        "peekOfCode": "def login_view(request):\n    if request.method == 'GET':\n        return render(request, 'core/auth/login.html')\n    if request.method == 'POST':\n        username = request.POST.get('username')\n        password = request.POST.get('password')\n        user = authenticate(request, username=username, password=password)\n        if user is not None:\n            login(request, user)\n            messages.success(request, 'Successfully loggen in.')",
         "detail": "plamentor.core.views",
         "documentation": {}
     },
@@ -481,7 +513,7 @@
         "kind": 5,
         "importPath": "plamentor.plamentor_app.settings",
         "description": "plamentor.plamentor_app.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n    \"/var/www/static/\",",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n]",
         "detail": "plamentor.plamentor_app.settings",
         "documentation": {}
     },
@@ -490,7 +522,7 @@
         "kind": 5,
         "importPath": "plamentor.plamentor_app.settings",
         "description": "plamentor.plamentor_app.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n    \"/var/www/static/\",\n]",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n]\n# Default primary key field type",
         "detail": "plamentor.plamentor_app.settings",
         "documentation": {}
     },
@@ -499,7 +531,7 @@
         "kind": 5,
         "importPath": "plamentor.plamentor_app.settings",
         "description": "plamentor.plamentor_app.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n    \"/var/www/static/\",\n]\n# Default primary key field type",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field",
         "detail": "plamentor.plamentor_app.settings",
         "documentation": {}
     },
@@ -508,7 +540,7 @@
         "kind": 5,
         "importPath": "plamentor.plamentor_app.settings",
         "description": "plamentor.plamentor_app.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n    \"/var/www/static/\",\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "plamentor.plamentor_app.settings",
         "documentation": {}
     },
@@ -517,7 +549,7 @@
         "kind": 5,
         "importPath": "plamentor.plamentor_app.settings",
         "description": "plamentor.plamentor_app.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n    \"/var/www/static/\",\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "plamentor.plamentor_app.settings",
         "documentation": {}
     },
@@ -526,7 +558,7 @@
         "kind": 5,
         "importPath": "plamentor.plamentor_app.settings",
         "description": "plamentor.plamentor_app.settings",
-        "peekOfCode": "STATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n    \"/var/www/static/\",\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "plamentor.plamentor_app.settings",
         "documentation": {}
     },

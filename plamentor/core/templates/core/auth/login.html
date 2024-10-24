@@ -9,6 +9,14 @@
                 <div class="column is-half">
                     <h1 class="title is-3 has-text-centered">Login</h1>
 
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="{% if message.tags %}alert {{ message.tags }}{% endif %}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
                     <form method="POST">
                         {% csrf_token %}
 
